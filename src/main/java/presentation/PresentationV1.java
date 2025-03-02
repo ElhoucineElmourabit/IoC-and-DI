@@ -1,13 +1,15 @@
 package presentation;
 
 import dao.DaoImpl;
+import ext.DaoImplV2;
 import metier.MetierImpl;
 
 public class PresentationV1 {
     public static void main(String[] args) {
 
-        DaoImpl d = new DaoImpl();
+        DaoImplV2 d = new DaoImplV2();
         MetierImpl metier = new MetierImpl(d);
+        //metier.setDao(d);
         System.out.println(metier.calcul());
 
     }
